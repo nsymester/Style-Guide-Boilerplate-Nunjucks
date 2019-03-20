@@ -30,6 +30,9 @@ body {
   padding-bottom: 12px; /* For older browsers */
   padding-top: 0.75rem;
   padding-top: 12px; /* For older browsers */
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 .sg-info,
@@ -48,6 +51,7 @@ body {
   padding-top: 1.5rem;
   padding-bottom: 16px; /* For older browsers */
   padding-bottom: 1rem;
+  margin-top: 56px;
 }
 
 .sg-sidebar {
@@ -84,9 +88,11 @@ body {
     float: left;
     font-size: 100%;
     opacity: 1;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 25%;
+    height: 100%;
+    overflow-y: scroll;
   }
 
   .sg-main {
