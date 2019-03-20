@@ -1,0 +1,69 @@
+/**
+  * @desc basic tag styles (HTML elements)
+  *       e.g.: sub and sup should be the same everywhere
+  * @author Neil Symester neil.symester@towergate.co.uk
+  */
+
+body {
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.75);
+  font-family: 'Lato', 'Helvetica', Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+a {
+  color: $darkCyan;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+img,
+svg,
+video,
+audio {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Oswald, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.std-list li {
+  list-style: none;
+
+  &:before {
+    content: '\25CF';
+    color: $vividCyan;
+    position: relative;
+    top: -2px;
+    left: -5px;
+    padding: 0;
+    margin: 0;
+  }
+}
