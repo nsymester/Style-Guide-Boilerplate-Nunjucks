@@ -4,37 +4,38 @@
 
 var SGB = window.SGB || {};
 
-(function (w, SGB, undefined) {
-
+(function(w, SGB, undefined) {
   var doc = w.document,
-      docEl = doc.documentElement;
+    docEl = doc.documentElement;
 
-    // Replace no-js class with js class
-    docEl.className = docEl.className.replace(/no-js/gi,'');
-    docEl.className+=' js';
+  // Replace no-js class with js class
+  docEl.className = docEl.className.replace(/no-js/gi, '');
+  docEl.className += ' js';
 
   // Cut the mustard
-  if ("querySelector" in doc && Array.prototype.forEach) {
-
-    docEl.className+=' sg-enhanced';
+  if ('querySelector' in doc && Array.prototype.forEach) {
+    docEl.className += ' sg-enhanced';
 
     // Syntactic sugar for querySelectorAll and event delegates courtesy
     // @paul_irish: https://gist.github.com/paulirish/12fb951a8b893a454b32
     var queryAll = document.querySelectorAll.bind(document);
 
-    Node.prototype.on = window.on = function (name, fn) {
-      this.addEventListener(name, fn)
+    Node.prototype.on = window.on = function(name, fn) {
+      this.addEventListener(name, fn);
     };
 
     NodeList.prototype.forEach = Array.prototype.forEach;
 
-    NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn) {
-      this.forEach(function (elem, i) {
-        elem.on(name, fn)
-      })
+    NodeList.prototype.on = NodeList.prototype.addEventListener = function(
+      name,
+      fn
+    ) {
+      this.forEach(function(elem, i) {
+        elem.on(name, fn);
+      });
     };
 
-     // Add functionality to toggle classes on elements
+    // Add functionality to toggle classes on elements
     function _hasClass(el, cl) {
       var regex = new RegExp('(?:\\s|^)' + cl + '(?:\\s|$)');
       return !!el.className.match(regex);
@@ -68,8 +69,7 @@ var SGB = window.SGB || {};
     };
 
     SGB.selectSourceCode = function() {
-      var range,
-          selection;
+      var range, selection;
 
       if (doc.body.createTextRange) {
         range = doc.body.createTextRange();
@@ -83,7 +83,7 @@ var SGB = window.SGB || {};
         selection.addRange(range);
       }
 
-       _toggleClass(this, 'sg-btn--select-active');
+      _toggleClass(this, 'sg-btn--select-active');
     };
 
     queryAll('.sg-nav-toggle').on('click', SGB.toggleNav);
@@ -91,4 +91,4 @@ var SGB = window.SGB || {};
     queryAll('.sg-btn--source').on('click', SGB.toggleSourceCode);
     queryAll('.sg-btn--select').on('click', SGB.selectSourceCode);
   }
-}(this, SGB));
+})(this, SGB);
