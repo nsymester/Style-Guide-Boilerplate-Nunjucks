@@ -4,7 +4,7 @@ This project is a fork of Brett Jankord's Style Guide Boilerplate. I've pretty m
 
 A starting point for crafting living style guides.
 
-[View Demo](http://nsymester.github.io/Style-Guide-Boilerplate/demo.html)
+[View Demo](https://nsymester.github.io/Style-Guide-Boilerplate-Nunjucks/)
 
 _Note: Sample patterns have been included in the demo. Your site will have its own unique patterns._
 
