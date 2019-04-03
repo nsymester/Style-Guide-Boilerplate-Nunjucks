@@ -8,7 +8,7 @@ A starting point for crafting living style guides.
 
 _Note: Sample patterns have been included in the demo. Your site will have its own unique patterns._
 
-![Screenshot](http://nsymester.github.io/Style-Guide-Boilerplate/images/screenshot.png)
+![Screenshot](http://nsymester.github.io/Style-Guide-Boilerplate-Nunjucks/images/screenshot.png)
 
 ## Getting Started With Style Guide Boilerplate
 
